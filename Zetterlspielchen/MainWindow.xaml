@@ -1,0 +1,23 @@
+﻿<Window x:Class="Zetterlspielchen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zetterlspielchen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Text="{Binding LastMsg}" IsReadOnly="True" AllowDrop="True" PreviewDragEnter="TextBox_PreviewDragEnter" PreviewDragOver="TextBox_PreviewDragEnter" PreviewDrop="TextBox_PreviewDrop" TextWrapping="Wrap"/>
+        <TextBox Grid.Row="1" Text="{Binding ThisMsg}" TextWrapping="Wrap"/>
+        <WrapPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Auflösen" Margin="10" Click="Resolve"/>
+            <Button Content="Ordner öffnen" Margin="10" Click="OpenFolder"/>
+            <Button Content="Fertig" Margin="10" Click="Export"/>
+        </WrapPanel>
+    </Grid>
+</Window>
