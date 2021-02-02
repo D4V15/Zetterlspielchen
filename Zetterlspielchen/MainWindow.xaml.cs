@@ -82,7 +82,7 @@ namespace Zetterlspielchen
 
         private void Export(object sender, RoutedEventArgs e)
         {
-            if (CompleteMsg != null && !CompleteMsg.Equals(string.Empty) && File.Exists(@"C:\temp\zetterlSpiel\" + SessionId + ".png"))
+            if (CompleteMsg != null && !CompleteMsg.Equals(string.Empty) && File.Exists(@"C:\temp\zetterlSpiel\" + SessionId + ".fuck"))
             {
                 string[] msgs = CompleteMsg.Split((char)1);
                 if (ThisMsg.Equals(msgs[msgs.Length - 1])) return;
@@ -107,7 +107,7 @@ namespace Zetterlspielchen
             {
                 NamingWindow namingWindow = new NamingWindow();
                 namingWindow.ShowDialog();
-                FileName = namingWindow.GivenName + ".png";
+                FileName = namingWindow.GivenName + ".fuck";
                 if (File.Exists(@"C:\temp\zetterlSpiel\" + CurNumber + "-" + FileName))
                 {
                     File.Delete(@"C:\temp\zetterlSpiel\" + CurNumber + "-" + FileName);
